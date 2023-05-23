@@ -14,10 +14,43 @@
         <p>{{cars[0]}}</p>
         <p>{{robot.name}}</p>     
         <p>{{greeting()}}</p>
+        <p>{{fullName()}}</p>
+
+        <hr>
+        <h4 v-text="myText"></h4>
+        <h5 v-html="myHtml"></h5>
+        <hr>
+
+     <div>
+        <img :src= "src" :alt="alt"/>
+     </div> 
+
+
+
+     <p v-if="x>y"> X is big</p>
+     <p v-else-if="x<y">Y is big</p>
+     <p v-else="x===y"> both are equal</p>
+     <hr>
+    <p v-if="changedUsers">  yess   </p>
+    <p v-else="changedUsers">  Noo   </p>
+
+    <p v-show="changedUsers"> yess boss </p>
+
+    <p v-for="(values,key,index) in user2" > {{index}} .  {{key}} : {{values}}</p>
+    <h1>{{named}}</h1>
+    <button v-on:click="updateUser">click here</button>
+    <h1>{{name}}</h1>
+    <h1 v-once>{{name}}</h1>
+     {{update()}}
+
+     <div v-on:mousemove="getcoord" class="box" >  
+        <h1>Hover me</h1>
+     </div>
+<p>X: {{p}}</p>
+<p>Y: {{q}}</p>
+  
+
     </div>
-
-
-
 
 
 
@@ -33,4 +66,13 @@
 
     <script src="app.js"></script>
 </body>
+<style>
+    .box{
+        background-color: brown;
+        display: subgrid;
+        border-radius: 5px;
+        height: 400px;
+        width: 400px;
+    }
+</style>
 </html>
