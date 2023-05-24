@@ -48,12 +48,49 @@
      </div>
 <p>X: {{p}}</p>
 <p>Y: {{q}}</p>
-  
+
+
+
+<div>
+    <h1>This is a change button for {{rename}}</h1>
+    <button v-on:click.right="namechanger('Sakib',$event)">click me</button>
+<hr>
+<hr>
+<hr>
+<!-- for update value usng v-model -->
+    <form v-on:submit.prevent="handleform">
+
+        <label >First Name</label>
+        <input type="text" v-model="formData.firstName">
+        <hr>
+        <label >Last Name</label>
+        <input type="text" v-model="formData.lastName">
+        <hr>
+        <button type="submit">Submit</button>
+    </form>
+
+    <button @click="n++">Add A</button>
+    <button @click="z++">Add B</button>
+    <p>N={{n}}</p>
+ <p>
+    Z={{z}}</p>
+ </p>   
+ <P>Salary + N={{addtoA}}</P> 
+ <P>Salary + Z ={{addtoB}}</P> 
+</div>
 
     </div>
 
 
+<div id="app1">
+<p>This is the second instance {{value}}</p>
+<button @click="change">click here</button>
+</div>
 
+<div id="app2">
+    <p>This is the third instance {{value}}</p>
+    </div>
+    
 
 
 
