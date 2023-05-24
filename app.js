@@ -131,3 +131,21 @@ const app3=new Vue({
 
 
 });
+
+const temp="<p> My name is {{reshape}}</p>"
+
+const app4=new Vue({
+
+    data:{
+        reshape:"Kishor",
+
+    },
+    template : temp,
+
+});
+
+setTimeout(() => {
+    
+    app4.$mount('#app4');
+    
+},3000);
